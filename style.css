@@ -55,6 +55,7 @@ The transition between these colors is smooth.
   border-radius: 30px;
   padding-left: 20px;
   margin-bottom: 25px;
+  flex-wrap: wrap;
 }
 input {
   flex: 1;
@@ -62,6 +63,7 @@ input {
   outline: none;
   background: transparent;
   padding: 10px;
+  min-width: 150px;
 }
 button {
   border: none;
@@ -71,7 +73,9 @@ button {
   border-radius: 40px;
   color: #edeef0;
   font-size: 16px;
-  padding: 16px 50px;
+
+  padding: 12px 30px; /* Adjust padding */
+  white-space: nowrap; /* Prevents button text from breaking */
 }
 button:hover {
   background-color: red;
