@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*  box-sizing: border-box; is used to include the padding and border in an element's total width and height. */
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  width: 100%;
+  min-height: 100vh; /* min height-  Preventing content overflow issues and vh means browser Window Height */
+
+  padding: 10px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  /*
+  linear-gradient(135deg, ... );
+135deg means the gradient flows at a 135-degree angle.
+Angles in CSS start from 0° (top) and rotate clockwise.
+135deg moves diagonally from the top-left to the bottom-right.
+
+Color Stops:
+#71b7e6 (Light Blue) → Starting color
+#9b59b6 (Purple) → Ending color
+The transition between these colors is smooth.
+  */
+}
+.hero {
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+  padding: 20px;
+}
+.todo {
+  width: 90%;
+  max-width: 440px;
+  background: #fff;
+  border-radius: 10px;
+  margin: 100px auto;
+  padding: 40px 30px 70px; /*top left and right 40px, bottom 30px*/
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+.todo h2 {
+  color: darkslateblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.todo img {
+  width: 30px;
+  margin-left: 10px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+}
+button {
+  border: none;
+  outline: none;
+  background: orangered;
+  cursor: pointer;
+  border-radius: 40px;
+  color: #edeef0;
+  font-size: 16px;
+  padding: 16px 50px;
+}
+button:hover {
+  background-color: red;
+}
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none; /*Users cannot highlight or copy the text inside .no-select.*/
+  cursor: pointer;
+  position: relative;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background-image: url(images/checked.png);
+}
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+}
+ul li span:hover {
+  background-color: red;
+  border-radius: 50%;
+}
